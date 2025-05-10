@@ -57,3 +57,25 @@ nums2 = [2,4,6], n=3
 ## Edge Cases
 * `nums2` empty → done
 * `nums1` empty → copy `nums2`
+
+
+## 🔐 Encode and Decode Strings(Day 21)
+
+---
+
+### ✅ Key Insight
+
+Use the **length of each string + a delimiter** (like `#`) before the string.  
+This helps safely encode and decode, even if the string contains special characters.
+
+---
+
+### 💡 Why It Works
+
+- **Length prefix** tells exactly how many characters to read.
+- Safe for any content (even strings with `#` or spaces).
+- No delimiter confusion — we never rely on the content, only the length.
+
+> Example:  
+> `["hello", "world"]` → `"5#hello5#world"`  
+> `["he#llo", "wo#rld"]` → `"6#he#llo6#wo#rld"`
