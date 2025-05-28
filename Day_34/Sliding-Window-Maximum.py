@@ -1,18 +1,26 @@
+from sortedcontainers import SortedDict
 class Solution:
-    def maxSlidingWindow(self, nums, k):
-        result = []
-        window = deque()
+    def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
+        mp = SortedDict()
+        i = j = 0
+        ans = []
 
-        for i, num in enumerate(nums):
-            while window and window[0] < i - k + 1:
-                window.popleft()
+        while j < len(nums):  # Corrected loop condition
+            value = nums[j]
+            if value in mp:
+                mp[value] += 1  # Simplified increment
+            else:
+                mp[value] = 1
 
-            while window and nums[window[-1]] < num:
-                window.pop()
+            if j - i + 1 == k:  # Check if window size is reached
+                ans.append(mp.keys()[-1])  # Access last key correctly
+                # Slide the window
+                mp[nums[i]] -= 1
+                if mp[nums[i]] == 0:
+                    del mp[nums[i]]
+                i += 1
+            j += 1
+            # print(mp)
 
-            window.append(i)
-
-            if i >= k - 1:
-                result.append(nums[window[0]])
-
-        return result
+        return ans
+        
