@@ -80,4 +80,4 @@ This helps safely encode and decode, even if the string contains special charact
 > `["hello", "world"]` → `"5#hello5#world"`  
 > `["he#llo", "wo#rld"]` → `"6#he#llo6#wo#rld"`
 
-## Min Stack(Day 24
+## Min Stack
