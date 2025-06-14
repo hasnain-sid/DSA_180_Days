@@ -26,7 +26,7 @@ This approach works because if the difference between two prefix sums equals `k`
 
 # Merge Sorted Arrays
 
-## Key Insight
+## Key Insigh
 **Core Idea**: Merge from the end using 3 pointers to avoid overwriting unprocessed elements.
 
 ## Why It Works
