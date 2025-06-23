@@ -81,3 +81,4 @@ This helps safely encode and decode, even if the string contains special charact
 > `["he#llo", "wo#rld"]` → `"6#he#llo6#wo#rld"`
 
 ## Min Stack day
+Read about sentinel stack implementation
