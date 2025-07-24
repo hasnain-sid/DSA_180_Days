@@ -70,7 +70,7 @@ This helps safely encode and decode, even if the string contains special charact
 
 ---
 
-### 💡 Why It Works
+### 💡 Why It Workss
 
 - **Length prefix** tells exactly how many characters to read.
 - Safe for any content (even strings with `#` or spaces).
