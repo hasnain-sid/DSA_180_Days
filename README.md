@@ -18,7 +18,7 @@ Consider the array `[3, 4, 7, 2, -3, 1, 4, 2]` with `k = 7`
 
 When we reach index 2 (element 7):
 * `currentSum = 3 + 4 + 7 = 14`
-* We check if `(currentSum - k) = 14 - 7 = 7` exists in our hash map
+* We check if `(currentSum - k) = 14 - 7 = 7` exists in our hashmap
 * If it does, it means there was a position where the prefix sum was 7
 * The elements between that position and the current position sum to 7
 
