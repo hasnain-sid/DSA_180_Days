@@ -66,7 +66,7 @@ nums2 = [2,4,6], n=3
 ### ✅ Key Insight
 
 Use the **length of each string + a delimiter** (like `#`) before the string.  
-This helps safely encode and decode, even if the string contains special characters.
+This helps safely encode and decode, even if the string contains special characters
 
 ---
 
