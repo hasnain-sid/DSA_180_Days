@@ -1,6 +1,6 @@
 # DSA_180_Days
 
-1. 442 Optimization part is good.
+1. 442 Optimization part is good
 
 # Subarray Sum Equals K - Understanding the Logic
 
