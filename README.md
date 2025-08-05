@@ -2,7 +2,7 @@
 
 1. 442 Optimization part is good
 
-# Subarray Sum Equals K - Understanding the Logic
+# Subarray Sum Equals K- Understanding the Logic
 
 ## Key Insight
 
