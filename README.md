@@ -6,7 +6,7 @@
 
 ## Key Insight
 
-**Statement**: If the value `(currentSum - k)` exists  in our hash map, it means we've found one or more subarrays ending at the current position that sum to exactly   `k`.
+**Statement**: If the value `(currentSum - k)` exists  in our hash map, it means we've found one or more subarrays ending at the current position that sum to exactly  `k`.
 
 **Explanation**:
 * At any index `i`, `currentSum` represents the sum of all elements from index `0` to `i`
