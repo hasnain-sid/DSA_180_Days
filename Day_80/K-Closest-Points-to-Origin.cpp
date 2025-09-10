@@ -1,24 +1,26 @@
-//Upvote and Comment
 class Solution {
 public:
     vector<vector<int>> kClosest(vector<vector<int>>& points, int k) {
-         //Answer vector
-        vector<vector<int>> result(k);
-        //maxheap storage initialization
-        priority_queue<vector<int>> maxHeap;
-        //Construction of maxheap
-        for (auto& p : points) {
-            int x = p[0], y = p[1];
-            maxHeap.push({x*x + y*y, x, y});
-            if (maxHeap.size() > k) {
-                maxHeap.pop();
-            }
+        map<int, vector<vector<int>>> mp;
+        
+        // Group points by their squared distance from origin
+        for(auto& point : points) {
+            int x = point[0], y = point[1];
+            int distanceSquared = x * x + y * y;
+            mp[distanceSquared].push_back({x, y});
         }
         
-        for (int i = 0; i < k; ++i) {
-            vector<int> top = maxHeap.top();
-            maxHeap.pop();
-            result[i] = {top[1], top[2]};
+        vector<vector<int>> result;
+        
+        // Since map is sorted by key (distance), iterate and collect k points
+        for(auto& entry : mp) {
+            for(auto& point : entry.second) {
+                if(result.size() < k) {
+                    result.push_back(point);
+                } else {
+                    return result;  // We've collected k points
+                }
+            }
         }
         
         return result;
