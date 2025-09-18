@@ -19,19 +19,21 @@ class Solution:
             else:
                 # Find inorder predecessor
                 predecessor = current.left
-                while predecessor.right and predecessor.right != current:
+                while predecessor.right:
                     predecessor = predecessor.right
                 
                 if not predecessor.right:
                     # Create thread
+                    tmp = current
                     predecessor.right = current
                     current = current.left
-                else:
-                    # Remove thread and process
-                    predecessor.right = None
-                    count += 1
-                    if count == k:
-                        return current.val
-                    current = current.right
+                    tmp.left = None
+                # else:
+                #     # Remove thread and process
+                #     predecessor.right = None
+                #     count += 1
+                #     if count == k:
+                #         return current.val
+                #     current = current.right
         
         return -1
