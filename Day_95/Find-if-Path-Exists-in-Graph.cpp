@@ -16,6 +16,21 @@
 16            graph[e[1]].push_back(e[0]);
 17        }
 18        vector<bool> visited(n,0);        
-19        return check(graph, visited, start, end);
-20    }
-21};
+19        // return check(graph, visited, start, end);
+20        queue<int> qt;
+21        qt.push(start);
+22        while(qt.size()){
+23            int source = qt.front();
+24            qt.pop();
+25            if(source == end) return true;
+26            for(auto it: graph[source]){
+27                if(!visited[it])
+28                    qt.push(it);
+29                visited[it] = true;
+30                
+31            }
+32            
+33        }
+34        return false;
+35    }
+36};
